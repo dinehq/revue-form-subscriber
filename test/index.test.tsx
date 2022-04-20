@@ -6,6 +6,8 @@ test('revueFromSubscriptionSubmit normal', () => {
   revueFromSubscriptionSubmit({
     profileId: 'test',
     memberEmail: 'test@name.com',
+    memberFirstName: 'test',
+    memberLastName: 'test',
   })
 
   expect(true).toBe(true)
@@ -16,12 +18,22 @@ test('revueFromSubscriptionSubmit params error', () => {
 
   try {
     revueFromSubscriptionSubmit({
-      profileId: '',
+      profileId: 'test',
       memberEmail: '',
     })
   } catch (e) {
     mock()
   }
 
-  expect(mock).toBeCalled()
+  try {
+    revueFromSubscriptionSubmit({
+      profileId: '',
+      memberEmail: 'test',
+    })
+  } catch (e) {
+    mock()
+  }
+
+  // call twice
+  expect(mock).toBeCalledTimes(2)
 })
