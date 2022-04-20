@@ -1,5 +1,7 @@
 # Revue Form Subscriber
 
+[![CI](https://github.com/dinehq/revue-form-subscriber/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/dinehq/revue-form-subscriber/actions/workflows/ci.yml)
+
 ## Install
 
 ```
