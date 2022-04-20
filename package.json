@@ -26,6 +26,7 @@
   "module": "./dist/esm/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
+    "dev": "vite serve preview",
     "build": "tsup",
     "build:watch": "tsup --watch",
     "coverage": "vitest run --coverage",
