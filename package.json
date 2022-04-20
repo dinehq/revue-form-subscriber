@@ -1,0 +1,61 @@
+{
+  "name": "@dinehq/revue-form-subscriber",
+  "version": "1.0.0",
+  "description": "create revue form subscriber",
+  "keywords": [
+    "revue"
+  ],
+  "homepage": "https://github.com/dinehq/revue-form-subscriber#readme",
+  "bugs": {
+    "url": "https://github.com/dinehq/revue-form-subscriber/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinehq/revue-form-subscriber.git"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/esm/index.mjs",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run build",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@dinehq/project-config": "^1.0.1",
+    "@types/jest": "^27.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "17.0.0-1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^14.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "happy-dom": "^2.55.0",
+    "prettier": "^2.6.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "tsup": "^5.12.5",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.5",
+    "vitest": "^0.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
