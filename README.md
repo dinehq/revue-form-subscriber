@@ -31,4 +31,5 @@ revueFromSubscriptionSubmit({
 
 ## Refs
 
-https://stackoverflow.com/questions/13001830/creating-and-submitting-a-form-with-javascript
+- https://stackoverflow.com/questions/13001830/creating-and-submitting-a-form-with-javascript
+- https://www.getrevue.co/app/integrations/forms
