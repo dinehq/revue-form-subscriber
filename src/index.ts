@@ -72,3 +72,5 @@ export function revueFromSubscriptionSubmit(revueFromSubscriptionConfig: RevueFr
 
   document.body.removeChild(form)
 }
+
+export default revueFromSubscriptionSubmit
