@@ -21,23 +21,24 @@
 // </div>
 
 interface RevueFromSubscriptionConfig {
-  profileId: string
+  profileId?: string
+  customUrl?: string
   memberEmail: string
   memberFirstName?: string
   memberLastName?: string
 }
 
 export function revueFromSubscriptionSubmit(revueFromSubscriptionConfig: RevueFromSubscriptionConfig) {
-  const { profileId, memberEmail, memberFirstName, memberLastName } = revueFromSubscriptionConfig
+  const { profileId, customUrl, memberEmail, memberFirstName, memberLastName } = revueFromSubscriptionConfig
 
-  if (!profileId) {
-    throw new Error('profileId is required')
+  if (!profileId && !customUrl) {
+    throw new Error('profileId or customUrl is required')
   } else if (!memberEmail) {
     throw new Error('memberEmail is required')
   }
 
   const form = document.createElement('form')
-  form.action = `https://www.getrevue.co/profile/${profileId}/add_subscriber`
+  form.action = customUrl || `https://www.getrevue.co/profile/${profileId}/add_subscriber`
   form.method = 'post'
   form.id = 'revue-form'
   form.name = 'revue-form'

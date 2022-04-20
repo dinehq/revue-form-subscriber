@@ -1,6 +1,6 @@
 {
   "name": "@dinehq/revue-form-subscriber",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "create revue form subscriber",
   "keywords": [
     "revue"
@@ -14,14 +14,6 @@
     "url": "git+https://github.com/dinehq/revue-form-subscriber.git"
   },
   "license": "MIT",
-  "exports": {
-    ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/esm/index.mjs",
-      "default": "./dist/index.js"
-    },
-    "./package.json": "./package.json"
-  },
   "main": "./dist/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/index.d.ts",
